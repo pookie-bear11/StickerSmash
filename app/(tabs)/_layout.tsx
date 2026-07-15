@@ -9,12 +9,12 @@ export default function TabLayout() {
   screenOptions={{
     tabBarActiveTintColor: '#ffd33d',
     headerStyle: {
-      backgroundColor: '#25292e',
+      backgroundColor: '#333',
     },
     headerShadowVisible: false,
     headerTintColor: '#fff',
     tabBarStyle: {
-      backgroundColor: '#25292e',
+      backgroundColor: '#333',
     },
   }}
 >
@@ -34,6 +34,15 @@ export default function TabLayout() {
           title: 'About',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused ? 'person-circle-sharp' : 'person-circle-outline'} color={color} size={24}/>
           ),
         }}
       />
